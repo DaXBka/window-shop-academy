@@ -1,0 +1,1 @@
+(()=>{"use strict";alert("I'm module!")})();
