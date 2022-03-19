@@ -1,3 +1,17 @@
-import { module } from './modules/module';
+import { timer } from './modules/timer';
 
-module();
+timer({
+    id: 'timer1',
+    timerDays: '.count_1 span',
+    timerHours: '.count_2 span',
+    timerMinutes: '.count_3 span',
+    timerSeconds: '.count_4 span',
+});
+
+timer({
+    id: 'timer2',
+    timerDays: '.count_1 span',
+    timerHours: '.count_2 span',
+    timerMinutes: '.count_3 span',
+    timerSeconds: '.count_4 span',
+});
