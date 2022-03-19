@@ -1,9 +1,4 @@
-export const addZero = num => {
-    if (num.toString().length < 2) {
-        return '0' + num;
-    }
-    return num;
-};
+export const addZero = num => (num.toString().length < 2 ? '0' + num : num);
 
 export const animate = ({ timing, draw, duration }) => {
     let start = performance.now();

@@ -1,5 +1,6 @@
 import { timer } from './modules/timer';
 import { calculator } from './modules/calculator';
+import { benefitsSlider } from './modules/benefitsSlider';
 
 timer({
     id: 'timer1',
@@ -23,4 +24,13 @@ calculator(100, {
     selectMaterialId: '#calc-type-material',
     inputSizeId: '#calc-input',
     inputTotalId: '#calc-total',
+});
+
+benefitsSlider({
+    blockId: 'benefits',
+    wrapper: '.benefits-wrap',
+    items: '.benefits__item',
+    arrows: '.benefits__arrow',
+    arrowLeft: '.benefits__arrow--left',
+    arrowRight: '.benefits__arrow--right',
 });

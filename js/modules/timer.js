@@ -41,7 +41,7 @@ export const timer = ({ id, timerDays, timerHours, timerMinutes, timerSeconds })
 
         daysTimer.textContent = addZero(getTime.days);
         hoursTimer.textContent = addZero(getTime.hours);
-        minutesTimer.txetContent = addZero(getTime.minutes);
+        minutesTimer.textContent = addZero(getTime.minutes);
         secondsTimer.textContent = addZero(getTime.seconds);
     };
 
