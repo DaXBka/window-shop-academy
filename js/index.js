@@ -45,3 +45,10 @@ modal({
     btnOpenClass: '.button',
     btnCloseClass: '.header-modal__close',
 });
+
+modal({
+    modalClass: '.services-modal',
+    overlayClass: '.overlay',
+    btnOpenClass: '.service-button',
+    btnCloseClass: '.services-modal__close',
+});
