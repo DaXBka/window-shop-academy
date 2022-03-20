@@ -1657,6 +1657,7 @@ input.error {
     position: fixed;
     right: 25px;
     bottom: 25px;
+    cursor: pointer;
     transform: rotate(90deg);
 }
 

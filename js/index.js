@@ -1,6 +1,7 @@
 import { timer } from './modules/timer';
 import { calculator } from './modules/calculator';
 import { benefitsSlider } from './modules/benefitsSlider';
+import { scrollButton } from './modules/scrollButton';
 
 timer({
     id: 'timer1',
@@ -34,3 +35,5 @@ benefitsSlider({
     arrowLeft: '.benefits__arrow--left',
     arrowRight: '.benefits__arrow--right',
 });
+
+scrollButton();
