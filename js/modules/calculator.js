@@ -53,9 +53,11 @@ export const calculator = (
         } else {
             total.value = '';
         }
+        total.classList.remove('active');
     };
 
     const renderTotal = num => {
+        total.classList.remove('active');
         animate({
             duration: 500,
             timing(timeFraction) {
@@ -63,6 +65,9 @@ export const calculator = (
             },
             draw(progress) {
                 total.value = Math.floor(num * progress);
+                if (progress === 1) {
+                    total.classList.add('active');
+                }
             },
         });
         total.value = num;

@@ -2,6 +2,7 @@ import { timer } from './modules/timer';
 import { calculator } from './modules/calculator';
 import { benefitsSlider } from './modules/benefitsSlider';
 import { scrollButton } from './modules/scrollButton';
+import { modal } from './modules/modal';
 
 timer({
     id: 'timer1',
@@ -37,3 +38,10 @@ benefitsSlider({
 });
 
 scrollButton();
+
+modal({
+    modalClass: '.header-modal',
+    overlayClass: '.overlay',
+    btnOpenClass: '.button',
+    btnCloseClass: '.header-modal__close',
+});

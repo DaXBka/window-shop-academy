@@ -111,6 +111,12 @@ input.error {
     outline: 0;
     text-align: center;
 }
+#calc-total {
+    transition: all 0.3s ease;
+}
+#calc-total.active {
+    box-shadow: 0px 0px 15px #ffb438;
+}
 .btn:hover {
     background-position: 0 -15px;
     -webkit-transition: background-position 0.1s linear;
@@ -724,6 +730,10 @@ p.services-image_mobile {
 .about-inner {
     text-align: center;
     font-size: 18px;
+    transition: transform 0.3s ease;
+}
+.about-inner:hover {
+    transform: scale(110%);
 }
 .about-inner span,
 .about-inner a {
@@ -773,11 +783,11 @@ p.services-image_mobile {
     top: 0;
     left: 0;
     opacity: 0;
+    transition: opacity 0.2s linear;
+    -webkit-transition: opacity 0.2s linear;
 }
-.document-inner:hover .document-overlay {
+.sertificate-document:hover .document-overlay {
     opacity: 1;
-    transition: opacity 0.3s linear;
-    -webkit-transition: opacity 0.3s linear;
 }
 #contacts {
     background-color: #00902a;
