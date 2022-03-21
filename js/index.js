@@ -1,6 +1,6 @@
 import { timer } from './modules/timer';
 import { calculator } from './modules/calculator';
-import { benefitsSlider } from './modules/benefitsSlider';
+import { slider } from './modules/slider';
 import { scrollButton } from './modules/scrollButton';
 import { modal } from './modules/modal';
 
@@ -20,7 +20,7 @@ timer({
     timerSeconds: '.count_4 span',
 });
 
-calculator(100, {
+calculator(3000, {
     id: 'calc',
     selectTypeId: '#calc-type',
     selectMaterialId: '#calc-type-material',
@@ -28,13 +28,24 @@ calculator(100, {
     inputTotalId: '#calc-total',
 });
 
-benefitsSlider({
+slider({
     blockId: 'benefits',
     wrapper: '.benefits-wrap',
     items: '.benefits__item',
     arrows: '.benefits__arrow',
     arrowLeft: '.benefits__arrow--left',
     arrowRight: '.benefits__arrow--right',
+    count: 3,
+});
+
+slider({
+    blockId: 'services',
+    wrapper: '.services__wrap',
+    items: '.services__item',
+    arrows: '.services__arrow',
+    arrowLeft: '.services__arrow--left',
+    arrowRight: '.services__arrow--right',
+    count: 2,
 });
 
 scrollButton();
