@@ -789,6 +789,41 @@ p.services-image_mobile {
 .sertificate-document:hover .document-overlay {
     opacity: 1;
 }
+
+.preview {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 57vh;
+    height: auto;
+}
+
+.preview img {
+    max-width: 100%;
+}
+
+.img-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px;
+    line-height: 0.6;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.548);
+    color: rgba(255, 255, 255, 0.452);
+
+    transition: all 0.3s ease;
+}
+
+.img-close:hover {
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
 #contacts {
     background-color: #00902a;
     color: #fff;

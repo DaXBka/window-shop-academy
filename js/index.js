@@ -3,6 +3,8 @@ import { calculator } from './modules/calculator';
 import { slider } from './modules/slider';
 import { scrollButton } from './modules/scrollButton';
 import { modal } from './modules/modal';
+import { aboutAnimation } from './modules/aboutAnimation';
+import { imageModal } from './modules/imageModal';
 
 timer({
     id: 'timer1',
@@ -28,6 +30,20 @@ calculator(3000, {
     inputTotalId: '#calc-total',
 });
 
+modal({
+    modalClass: '.header-modal',
+    overlayClass: '.overlay',
+    btnOpenClass: '.button',
+    btnCloseClass: '.header-modal__close',
+});
+
+modal({
+    modalClass: '.services-modal',
+    overlayClass: '.overlay',
+    btnOpenClass: '.service-button',
+    btnCloseClass: '.services-modal__close',
+});
+
 slider({
     blockId: 'benefits',
     wrapper: '.benefits-wrap',
@@ -48,18 +64,6 @@ slider({
     count: 2,
 });
 
+imageModal();
 scrollButton();
-
-modal({
-    modalClass: '.header-modal',
-    overlayClass: '.overlay',
-    btnOpenClass: '.button',
-    btnCloseClass: '.header-modal__close',
-});
-
-modal({
-    modalClass: '.services-modal',
-    overlayClass: '.overlay',
-    btnOpenClass: '.service-button',
-    btnCloseClass: '.services-modal__close',
-});
+aboutAnimation();
