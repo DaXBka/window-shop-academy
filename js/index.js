@@ -5,6 +5,8 @@ import { scrollButton } from './modules/scrollButton';
 import { modal } from './modules/modal';
 import { aboutAnimation } from './modules/aboutAnimation';
 import { imageModal } from './modules/imageModal';
+import { validatation, validation } from './modules/validation';
+import { sendForm } from './modules/sendForm';
 
 timer({
     id: 'timer1',
@@ -63,6 +65,9 @@ slider({
     arrowRight: '.services__arrow--right',
     count: 2,
 });
+
+validation();
+sendForm();
 
 imageModal();
 scrollButton();

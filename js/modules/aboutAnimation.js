@@ -19,5 +19,5 @@ export const aboutAnimation = () => {
         if (count >= aboutItems.length) {
             count = 0;
         }
-    }, 2500);
+    }, 1000);
 };
