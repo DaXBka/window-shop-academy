@@ -14,7 +14,8 @@ export const scrollLinks = () => {
         link.addEventListener('click', e => {
             e.preventDefault();
 
-            const id = link.getAttribute('href').substring(1) + '_1';
+            let id = link.getAttribute('href').substring(1);
+            if (id == 'order') id += '_1';
             const section = document.getElementById(id);
 
             if (section) {
