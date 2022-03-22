@@ -13,12 +13,7 @@ export const validationSubmit = inputs => {
                 }
                 break;
             case 'phone':
-                if (
-                    !/^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(
-                        input.value
-                    ) ||
-                    !input.value
-                ) {
+                if (!/^\+?[0-9]{6,16}$/.test(input.value) || !input.value) {
                     input.style.borderColor = 'red';
                     isNotError = false;
                 }
