@@ -23,6 +23,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "seamless-scroll-polyfill": "^2.1.8",
     "swiper": "^8.0.7"
   }
 }

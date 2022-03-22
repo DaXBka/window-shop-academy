@@ -2,8 +2,8 @@ export const validationSubmit = inputs => {
     let isNotError = true;
 
     inputs.forEach(input => {
-        const name = input.getAttribute('name');
         input.style.borderColor = '';
+        const name = input.getAttribute('name');
 
         switch (name) {
             case 'fio':

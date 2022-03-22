@@ -5,8 +5,9 @@ import { scrollButton } from './modules/scrollButton';
 import { modal } from './modules/modal';
 import { aboutAnimation } from './modules/aboutAnimation';
 import { imageModal } from './modules/imageModal';
-import { validatation, validation } from './modules/validation';
+import { validation } from './modules/validation';
 import { sendForm } from './modules/sendForm';
+import { scrollLinks } from './modules/scrollLinks';
 
 timer({
     id: 'timer1',
@@ -66,9 +67,13 @@ slider({
     count: 2,
 });
 
+scrollLinks();
 validation();
 sendForm();
-
 imageModal();
 scrollButton();
 aboutAnimation();
+
+//
+// Без бургер-меню, меня на него не хватило)
+//
