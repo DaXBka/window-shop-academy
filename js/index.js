@@ -25,7 +25,7 @@ timer({
     timerSeconds: '.count_4 span',
 });
 
-calculator(3000, {
+calculator(2000, {
     id: 'calc',
     selectTypeId: '#calc-type',
     selectMaterialId: '#calc-type-material',

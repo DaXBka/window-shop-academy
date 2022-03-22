@@ -7,7 +7,7 @@ export const validationSubmit = inputs => {
 
         switch (name) {
             case 'fio':
-                if (!/[А-яA-z]+/g.test(input.value) || !input.value) {
+                if (!/^[А-яA-z]{2,}$/.test(input.value) || !input.value) {
                     input.style.borderColor = 'red';
                     isNotError = false;
                 }

@@ -27,7 +27,7 @@ export const calculator = (
 
     try {
         if (!(selectType && selectMaterial && inputSize && total)) {
-            throw new Error('Не были найдены input / select для');
+            throw new Error('Не были найдены input / select для calculator.js');
         }
     } catch (e) {
         return;
@@ -35,7 +35,7 @@ export const calculator = (
 
     const calculateTotalPrice = () => {
         const typeValue = +selectType.value;
-        const materialValue = +selectMaterial.value;
+        const materialValue = +selectMaterial.value || 1;
 
         let squareValue = 1;
         let totalValue = 0;
@@ -44,7 +44,7 @@ export const calculator = (
             squareValue = +inputSize.value;
         }
 
-        if (typeValue && materialValue) {
+        if (typeValue && inputSize.value) {
             totalValue = price * typeValue * materialValue * squareValue;
         }
 
