@@ -16,6 +16,14 @@ export const sendForm = ({
     const succes = document.querySelector(succesClass);
     const danger = document.querySelector(dangerClass);
 
+    try {
+        if (!(forms && loader && success && danger)) {
+            throw new Error('Неверно переданы классы');
+        }
+    } catch (e) {
+        console.error(e);
+    }
+
     forms.forEach(form => {
         form.addEventListener('submit', e => {
             e.preventDefault();
