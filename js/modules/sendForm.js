@@ -1,14 +1,20 @@
 import { validationSubmit } from './validation';
 import { review } from './helpers';
 
-export const sendForm = () => {
-    const forms = document.querySelectorAll('form');
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+export const sendForm = ({
+    formClass,
+    url,
+    loaderClass = '.loader-box',
+    succesClass = '.alert-success',
+    dangerClass = '.alert-danger',
+    someElem = [],
+}) => {
+    const forms = document.querySelectorAll(formClass);
 
-    const loader = document.querySelector('.loader-box');
+    const loader = document.querySelector(loaderClass);
 
-    const succes = document.querySelector('.alert-success');
-    const danger = document.querySelector('.alert-danger');
+    const succes = document.querySelector(succesClass);
+    const danger = document.querySelector(dangerClass);
 
     forms.forEach(form => {
         form.addEventListener('submit', e => {
@@ -23,6 +29,24 @@ export const sendForm = () => {
                 formData.forEach((value, key) => {
                     data[key] = value;
                 });
+
+                if (someElem.length > 0) {
+                    someElem.forEach(item => {
+                        if (item.type == 'input') {
+                            const someInput = document.getElementById(item.id);
+
+                            if (someInput) {
+                                data[item.id] = someInput.value;
+                            }
+                        } else if (item.type == 'block') {
+                            const someBlock = document.getElementById(item.id);
+
+                            if (someBlock) {
+                                data[item.id] = someBlock.textContent;
+                            }
+                        }
+                    });
+                }
 
                 form.reset();
                 loader.style.display = 'block';
@@ -41,7 +65,7 @@ export const sendForm = () => {
                         review.show(succes, '', 'flex');
                         setTimeout(() => review.hide(succes), 3000);
                     })
-                    .catch(() => {
+                    .catch(error => {
                         loader.style.display = '';
 
                         review.show(danger, '', 'flex');

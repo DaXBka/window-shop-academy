@@ -67,9 +67,22 @@ slider({
     count: 2,
 });
 
+sendForm({
+    formClass: 'form',
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    loaderClass: '.loader-box',
+    succesClass: '.alert-success',
+    dangerClass: '.alert-danger',
+    someElem: [
+        {
+            id: 'calc-total',
+            type: 'input',
+        },
+    ],
+});
+
 scrollLinks();
 validation();
-sendForm();
 imageModal();
 scrollButton();
 aboutAnimation();
