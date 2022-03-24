@@ -71,7 +71,7 @@ sendForm({
     formClass: 'form',
     url: 'https://jsonplaceholder.typicode.com/posts',
     loaderClass: '.loader-box',
-    succesClass: '.alert-success',
+    successClass: '.alert-success',
     dangerClass: '.alert-danger',
     someElem: [
         {

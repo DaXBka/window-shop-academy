@@ -5,7 +5,7 @@ export const sendForm = ({
     formClass,
     url,
     loaderClass = '.loader-box',
-    succesClass = '.alert-success',
+    successClass = '.alert-successs',
     dangerClass = '.alert-danger',
     someElem = [],
 }) => {
@@ -13,7 +13,7 @@ export const sendForm = ({
 
     const loader = document.querySelector(loaderClass);
 
-    const succes = document.querySelector(succesClass);
+    const success = document.querySelector(successClass);
     const danger = document.querySelector(dangerClass);
 
     try {
@@ -70,8 +70,8 @@ export const sendForm = ({
                     .then(() => {
                         loader.style.display = '';
 
-                        review.show(succes, '', 'flex');
-                        setTimeout(() => review.hide(succes), 3000);
+                        review.show(success, '', 'flex');
+                        setTimeout(() => review.hide(success), 3000);
                     })
                     .catch(() => {
                         loader.style.display = '';
