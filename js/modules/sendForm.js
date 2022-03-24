@@ -65,7 +65,7 @@ export const sendForm = ({
                         review.show(succes, '', 'flex');
                         setTimeout(() => review.hide(succes), 3000);
                     })
-                    .catch(error => {
+                    .catch(() => {
                         loader.style.display = '';
 
                         review.show(danger, '', 'flex');
